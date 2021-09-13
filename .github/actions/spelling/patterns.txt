@@ -1,0 +1,26 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# bitrise
+\bapp\.bitrise\.io/app/[0-9a-f]*/[\w.?=&]*
+
+(['"])[0-9a-f]{32}\g{-1}
+
+# URL escaped characters
+\%[0-9A-F]{2}
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
+border_color: [0-9a-fA-FgGrR_]{2,}
+
+lang_map = .*
+OC_REFRESH_TOKEN = ".*"
+OC_ACCESS_TOKEN = ".*"
+
+"oauth2_client_secret">.*<
+
+# share link
+/s/\w+"
+
+\bshate_with\b
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b

@@ -1,0 +1,27 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-excludes
+(?:^|/)(?i)COPYRIGHT
+(?:^|/)(?i)LICEN[CS]E
+(?:^|/)package(?:-lock|)\.json$
+(?:^|/)vendor/
+/metadata/android/(?!en)
+/values-(?!en)
+ignore$
+\.avi$
+\.gif$
+\.ico$
+\.jar$
+\.jpe?g$
+\.lock$
+\.map$
+\.min\..
+\.mod$
+\.mp[34]$
+\.odp$
+\.png$
+\.ttf$
+\.wav$
+^changelog/[^/]*_
+^doc/rfc
+^\.github/
+^\QowncloudApp/src/androidTest/java/com/owncloud/android/sharing/shares/ui/SharesContentProviderTest.kt\E$
+^\QowncloudData/src/test/java/com/owncloud/android/data/shares/db/OCShareEntityTest.kt\E$
