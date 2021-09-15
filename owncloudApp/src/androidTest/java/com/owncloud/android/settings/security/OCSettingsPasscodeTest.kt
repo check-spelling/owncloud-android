@@ -130,7 +130,7 @@ class OCSettingsPasscodeTest {
         //Open Activity in passcode creation mode
         openPasscodeActivity(PassCodeActivity.ACTION_REQUEST_WITH_RESULT)
 
-        //First typin
+        //First typing
         //Type incorrect passcodeg
         typePasscode(defaultPassCode)
         //Second typing
