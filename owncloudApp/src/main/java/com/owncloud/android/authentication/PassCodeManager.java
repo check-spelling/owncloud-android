@@ -36,11 +36,11 @@ import java.util.Set;
 
 public class PassCodeManager {
 
-    private static final Set<Class> sExemptOfPasscodeActivites;
+    private static final Set<Class> sExemptOfPasscodeActivities;
 
     static {
-        sExemptOfPasscodeActivites = new HashSet<>();
-        sExemptOfPasscodeActivites.add(PassCodeActivity.class);
+        sExemptOfPasscodeActivities = new HashSet<>();
+        sExemptOfPasscodeActivities.add(PassCodeActivity.class);
         // other activities may be exempted, if needed
     }
 
@@ -64,7 +64,7 @@ public class PassCodeManager {
 
     public void onActivityStarted(Activity activity) {
 
-        if (!sExemptOfPasscodeActivites.contains(activity.getClass()) && passCodeShouldBeRequested()) {
+        if (!sExemptOfPasscodeActivities.contains(activity.getClass()) && passCodeShouldBeRequested()) {
 
             // Do not ask for passcode if biometric is enabled
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && BiometricManager.getBiometricManager(activity).
