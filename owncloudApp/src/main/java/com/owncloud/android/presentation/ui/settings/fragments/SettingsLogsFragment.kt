@@ -50,7 +50,7 @@ class SettingsLogsFragment : PreferenceFragmentCompat() {
         prefLogsView = findPreference(PREFERENCE_LOGGER)
 
         if (PermissionUtil.isPermissionNotGranted(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            PermissionUtil.requestWriteExternalStoreagePermission(requireActivity())
+            PermissionUtil.requestWriteExternalStoragePermission(requireActivity())
         }
 
         with(logsViewModel.isLoggingEnabled()) {
