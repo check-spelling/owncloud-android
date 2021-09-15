@@ -44,13 +44,13 @@ import java.util.Set;
  */
     public class BiometricManager {
 
-    private static final Set<Class> sExemptOfBiometricActivites;
+    private static final Set<Class> sExemptOfBiometricActivities;
 
     private androidx.biometric.BiometricManager mBiometricManager;
 
     static {
-        sExemptOfBiometricActivites = new HashSet<>();
-        sExemptOfBiometricActivites.add(BiometricActivity.class);
+        sExemptOfBiometricActivities = new HashSet<>();
+        sExemptOfBiometricActivities.add(BiometricActivity.class);
         // other activities may be exempted, if needed
     }
 
@@ -76,7 +76,7 @@ import java.util.Set;
 
     public void onActivityStarted(Activity activity) {
 
-        if (!sExemptOfBiometricActivites.contains(activity.getClass())) {
+        if (!sExemptOfBiometricActivities.contains(activity.getClass())) {
 
             if (biometricShouldBeRequested()) {
 
