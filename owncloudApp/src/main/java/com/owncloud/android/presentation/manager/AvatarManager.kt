@@ -62,7 +62,7 @@ class AvatarManager : KoinComponent {
             return BitmapUtils.bitmapToCircularBitmapDrawable(appContext.resources, it)
         }
 
-        // Avatar not found in disk caché, fetch from server.
+        // Avatar not found in disk cache, fetch from server.
         if (fetchIfNotCached) {
             Timber.i("Avatar with imageKey $imageKey is not available in cache. Fetching from server...")
             val getUserAvatarAsyncUseCase: GetUserAvatarAsyncUseCase by inject()
