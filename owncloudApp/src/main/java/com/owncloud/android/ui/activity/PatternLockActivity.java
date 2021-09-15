@@ -140,7 +140,7 @@ public class PatternLockActivity extends AppCompatActivity {
     }
 
     /**
-     * Binds the appropiate listener to the pattern view.
+     * Binds the appropriate listener to the pattern view.
      */
     protected void setPatternListener() {
         mPatternLockView.addPatternLockListener(new PatternLockViewListener() {

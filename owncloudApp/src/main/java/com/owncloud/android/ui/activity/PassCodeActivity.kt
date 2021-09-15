@@ -147,7 +147,7 @@ class PassCodeActivity : BaseActivity() {
     }
 
     /**
-     * Binds the appropiate listeners to the input boxes receiving each digit of the pass code.
+     * Binds the appropriate listeners to the input boxes receiving each digit of the pass code.
      */
     protected fun setTextListeners() {
         for (i in 0 until numberOfPassInputs) {
