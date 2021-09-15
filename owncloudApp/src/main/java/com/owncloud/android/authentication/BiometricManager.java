@@ -39,7 +39,7 @@ import java.util.Set;
 @RequiresApi(api = Build.VERSION_CODES.M)
 /**
  * Handle biometric requests. Besides, is a facade to access some
- * {@link androidx.biometric.BiometricMananager} methods
+ * {@link androidx.biometric.BiometricManager} methods
  */
     public class BiometricManager {
 
