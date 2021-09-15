@@ -83,7 +83,7 @@ class OCSettingsPasscodeTest {
             withText(R.string.pass_code_configure_your_pass_code_explanation)
         }
 
-        // Check if required amout of input fields are actually displayed
+        // Check if required amount of input fields are actually displayed
         onView(withId(R.id.passCodeTxtLayout)).check(matches(isDisplayed()))
         onView(withId(R.id.passCodeTxtLayout)).check(matches(withChildViewCount(PassCodeActivity.numberOfPassInputs, withId(R.id.passCodeEditText))))
 
