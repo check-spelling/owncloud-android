@@ -37,13 +37,13 @@ import java.util.Set;
 
 public class PatternManager {
 
-    private static final Set<Class> sExemptOfPatternActivites;
+    private static final Set<Class> sExemptOfPatternActivities;
     private Long timeStamp = 0L;
     private int mVisibleActivitiesCounter = 0;
 
     static {
-        sExemptOfPatternActivites = new HashSet<>();
-        sExemptOfPatternActivites.add(PatternLockActivity.class);
+        sExemptOfPatternActivities = new HashSet<>();
+        sExemptOfPatternActivities.add(PatternLockActivity.class);
     }
 
     private static PatternManager mPatternManagerInstance = null;
@@ -59,7 +59,7 @@ public class PatternManager {
     }
 
     public void onActivityStarted(Activity activity) {
-        if (!sExemptOfPatternActivites.contains(activity.getClass()) && patternShouldBeRequested()) {
+        if (!sExemptOfPatternActivities.contains(activity.getClass()) && patternShouldBeRequested()) {
 
             // Do not ask for pattern if biometric is enabled
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && BiometricManager.getBiometricManager(activity).

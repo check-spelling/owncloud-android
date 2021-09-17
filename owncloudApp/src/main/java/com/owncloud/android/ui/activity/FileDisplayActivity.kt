@@ -238,14 +238,14 @@ class FileDisplayActivity : FileActivity(), FileFragment.ContainerActivity, OnEn
                     R.string.permission_storage_access,
                     Snackbar.LENGTH_INDEFINITE
                 )
-                    .setAction(android.R.string.ok) { PermissionUtil.requestWriteExternalStoreagePermission(this@FileDisplayActivity) }
+                    .setAction(android.R.string.ok) { PermissionUtil.requestWriteExternalStoragePermission(this@FileDisplayActivity) }
 
                 DisplayUtils.colorSnackbar(this, snackbar)
 
                 snackbar.show()
             } else {
                 // No explanation needed, request the permission.
-                PermissionUtil.requestWriteExternalStoreagePermission(this)
+                PermissionUtil.requestWriteExternalStoragePermission(this)
             }
         }
 
@@ -362,7 +362,7 @@ class FileDisplayActivity : FileActivity(), FileFragment.ContainerActivity, OnEn
      *
      * @param file used to decide which fragment should be chosen
      * @return a new second fragment instance if it has not been chosen before, or the fragment
-     * previously chosen otherwhise
+     * previously chosen otherwise
      */
     private fun chooseInitialSecondFragment(file: OCFile?): Fragment? {
 
@@ -522,7 +522,7 @@ class FileDisplayActivity : FileActivity(), FileFragment.ContainerActivity, OnEn
         PassCodeManager.bayPassUnlockOnce()
         PatternManager.getPatternManager().bayPassUnlockOnce()
 
-        // Hanndle calls form internal activities.
+        // Handle calls form internal activities.
         if (requestCode == REQUEST_CODE__SELECT_CONTENT_FROM_APPS && (resultCode == Activity.RESULT_OK || resultCode == RESULT_OK_AND_MOVE)) {
 
             requestUploadOfContentFromApps(data, resultCode)
@@ -1459,7 +1459,7 @@ class FileDisplayActivity : FileActivity(), FileFragment.ContainerActivity, OnEn
      * synchronized too.
      *
      * @param folder     Folder to refresh.
-     * @param ignoreETag If 'true', the data from the server will be fetched and sync'ed even if the eTag
+     * @param ignoreETag If 'true', the data from the server will be fetched and synced even if the eTag
      * didn't change.
      */
     fun startSyncFolderOperation(folder: OCFile?, ignoreETag: Boolean) {

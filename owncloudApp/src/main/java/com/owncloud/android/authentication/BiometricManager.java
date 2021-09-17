@@ -40,17 +40,17 @@ import java.util.Set;
 @RequiresApi(api = Build.VERSION_CODES.M)
 /**
  * Handle biometric requests. Besides, is a facade to access some
- * {@link androidx.biometric.BiometricMananager} methods
+ * {@link androidx.biometric.BiometricManager} methods
  */
     public class BiometricManager {
 
-    private static final Set<Class> sExemptOfBiometricActivites;
+    private static final Set<Class> sExemptOfBiometricActivities;
 
     private androidx.biometric.BiometricManager mBiometricManager;
 
     static {
-        sExemptOfBiometricActivites = new HashSet<>();
-        sExemptOfBiometricActivites.add(BiometricActivity.class);
+        sExemptOfBiometricActivities = new HashSet<>();
+        sExemptOfBiometricActivities.add(BiometricActivity.class);
         // other activities may be exempted, if needed
     }
 
@@ -76,7 +76,7 @@ import java.util.Set;
 
     public void onActivityStarted(Activity activity) {
 
-        if (!sExemptOfBiometricActivites.contains(activity.getClass())) {
+        if (!sExemptOfBiometricActivities.contains(activity.getClass())) {
 
             if (biometricShouldBeRequested()) {
 

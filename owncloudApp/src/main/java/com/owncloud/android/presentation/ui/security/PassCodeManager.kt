@@ -32,7 +32,7 @@ import com.owncloud.android.authentication.BiometricManager
 
 object PassCodeManager {
 
-    private val exemptOfPasscodeActivites: MutableSet<Class<*>> = mutableSetOf(PassCodeActivity::class.java)
+    private val exemptOfPasscodeActivities: MutableSet<Class<*>> = mutableSetOf(PassCodeActivity::class.java)
 
     private var timestamp = 0L
     private var visibleActivitiesCounter = 0
@@ -41,7 +41,7 @@ object PassCodeManager {
     private const val PASS_CODE_TIMEOUT = 1_000
 
     fun onActivityStarted(activity: Activity) {
-        if (!exemptOfPasscodeActivites.contains(activity.javaClass) && passCodeShouldBeRequested()) {
+        if (!exemptOfPasscodeActivities.contains(activity.javaClass) && passCodeShouldBeRequested()) {
 
             // Do not ask for passcode if biometric is enabled
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && BiometricManager.getBiometricManager(activity).isBiometricEnabled) {
